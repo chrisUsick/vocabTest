@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='javascripts/jquery.js')
+    block head
+  body
+    div.navbar
+      ul
+        li
+          a(href="/") home
+        li 
+          a(href="/test") test
+        li
+          a(href="auth/google") log in with google
+      block headerbar
+
+
+    block content

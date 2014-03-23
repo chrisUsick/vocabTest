@@ -1,0 +1,27 @@
+extends layout
+include mixins
+block headerbar
+  if user
+    +welcome(user.name)
+block content
+  h1= title
+  if title
+    p Welcome to #{title}
+
+  form#addWords
+    select#subject
+      option
+        i select subject
+    select#unit
+    select#category
+    label(for='word') word
+    input#word(type=text)
+    label(for='def') definition
+    input#def(type=text)
+    input(type='submit')
+
+  h1 word list 
+  #wordList
+
+  script(src='javascripts/agility.min.js')
+  script(src='javascripts/addWords.js')

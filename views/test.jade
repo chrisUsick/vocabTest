@@ -1,0 +1,22 @@
+extends layout
+include mixins
+block headerbar
+  if user
+    +welcome(user.name)
+block content
+  h1 = test 
+
+  form#testType
+    label(name='WdORdef', for='word') word
+    input#word(type='radio', name='wdORdef',)
+    label(name='wdORdef', for='def') definition
+    input#def(type='radio', name='wdORdef')
+    select#subject
+      option select subject
+    select#unit
+    select#category
+    input(type='submit')
+
+  #testWords
+  script(src='javascripts/agility.min.js')
+  script(src='javascripts/test.js')
