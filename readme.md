@@ -1,1 +1,4 @@
-The reason for starting this project for a fourth time is to make a final (another) attempt to streamline websocket communication, and to correct the pg disconnecting error.  Suggested solution on github issue 527 of node-postgres.
+# VocabTest
+This is a simple vocab testing app.
+It uses postgreSQL database and pl/pgsql functions to perform database operations.
+Websocket communication is done by the npm package `ws` and a helper library at `/lib`. 
