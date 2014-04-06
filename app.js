@@ -79,6 +79,11 @@ Module dependencies
     app.use(express.errorHandler());
   }
 
+  console.log(new GoogleStrategy({
+    returnURL: 'http://192.168.56.1:3000/auth/google/return',
+    realm: 'http://192.168.56.1:3000/'
+  }), 'goog strat');
+
   passport.use(new GoogleStrategy({
     returnURL: 'http://192.168.56.1:3000/auth/google/return',
     realm: 'http://192.168.56.1:3000/'

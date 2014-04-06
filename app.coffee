@@ -43,7 +43,7 @@ app.use express.session(
 	store: store
 	key: 'sid'
 	secret: 'guess again')
-
+# order is important here!!!!
 app.use passport.initialize()
 app.use app.router
 app.use passport.session()
@@ -52,6 +52,7 @@ app.use passport.session()
 app.use express.errorHandler()  if "development" is app.get("env")
 
 # auth code
+
 passport.use new GoogleStrategy({ 
     returnURL: 'http://192.168.56.1:3000/auth/google/return',
     realm: 'http://192.168.56.1:3000/'
